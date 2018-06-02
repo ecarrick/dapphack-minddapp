@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MindDapp | Ask A Question</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/global.css"/>
+    <!-- <script src="/bundle.js"></script> -->
+    <script src="/dsteem/dist/dsteem.js"></script>
+    <script src="/app.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/"><img class="lil_logo" src="../img/mindDapp_logo_small.png" height="60"/></a>
+      <svg class="username" width="60" height="60">
+        <defs>
+          <pattern id="image" patternUnits="userSpaceOnUse" height="60" width="60">
+            <image x="0" y="0" height="50" width="50" xlink:href="http://i.imgur.com/7Nlcay7.jpg"></image>
+          </pattern>
+        </defs>
+        <circle id='top' cx="25" cy="25" r="25" fill="url(#image)"/>
+      </svg>
+      <p class="username">Hello, Matt</p>
+    </div>
+    <div class="banner">
+      <img class="full_width" src="../img/mindDapp_banner.jpg"/>
+    </div>
+    <div class="home-frame">
+      <form class="ask_question">
+        <h1>Submit a post to the Steem blockchain</h1>
+        <div class="form form-half half-left"><label>Username:</label><br><input id="username" type="text" size="65" placeholder="mindDapp_User" class="form-control"></div>
+        <div class="form form-half half-right"><label>Title of post:</label><br><input id="title" type="text" size="65" class="form-control" placeholder="Your Question" required></div>
+        <div class="form form-half half-left"><label>Posting private key:</label><br><input id="postingKey" type="password" size="65" value="5KJYDpZShWeKEUH4rLkrRBVA6r96JBDN17fu9Vk3rtH2a13TCMe" class="form-control"></div>
+        <div class="form form-half half-right"><label>Transfer private key:</label><br><input id="transferKey" type="password" size="65" value="5JztqtLb6eR4spfcc3LH3wGyS8gfAkWWZjbh97pizvMCv1Tk6iJ" class="form-control"></div>
+        <div class="form form-full"><label>Post body:</label><br><textarea id="body" class="form-control" rows="3" placeholder="Further explanation here if needed."></textarea></div>
+        <div class="form form-half half-left"><label>Tags (separated by commas):</label><br><input id="tags" type="text" size="65" class="form-control" placeholder="Tag your question"></div>
+        <div class="form form-half half-right"><label>Add a bounty for your question:</label><br><input id="bounty" type="number" size="65" class="form-control" min="0.001" step="0.001" placeholder="1.000"></div>
+        <input type="button" value="Submit post!" style="width: 96.5%;" onclick="submitPost()" class="submit">
+      </form>
+      <div id="postLink"></div>
+    </div>
+  </body>
+  
+</html>

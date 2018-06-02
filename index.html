@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MindDapp | Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/global.css"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <script src="/dsteem/dist/dsteem.js"></script>
+    <script src="/app.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html"><img class="lil_logo" src="/img/mindDapp_logo_small.png" height="60"/></a>
+      <svg class="username" width="60" height="60">
+        <defs>
+          <pattern id="image" patternUnits="userSpaceOnUse" height="60" width="60">
+            <image x="0" y="0" height="50" width="50" xlink:href="http://i.imgur.com/7Nlcay7.jpg"></image>
+          </pattern>
+        </defs>
+        <circle id='top' cx="25" cy="25" r="25" fill="url(#image)"/>
+      </svg>
+      <p class="username">Hello, Matt</p>
+    </div>
+    <div class="banner">
+      <img class="full_width" src="/img/mindDapp_banner.jpg"/>
+    </div>
+    <div class="ask">
+      <form action="/submit" method"GET">
+        <input class="center search" type="text" placeholder="..."><br>
+        <input class="center submit" type="submit" value="Ask A Question">
+      </form>
+    </div>
+    <hr>
+    <div class="home-frame">
+      <div class="full_width main">
+        <table class="outer_table">
+          <tbody>
+            <tr>
+              <td class="inner_td">
+                <div class="categories">
+                    <h1 onclick="getPosts()">Categories</h1>
+                    <h2 onclick="getPosts('Finance')">Finance</h2>
+                    <h2 onclick="getPosts('Art')">Art</h2>
+                    <h2 onclick="getPosts('Crypto')">Crypto</h2>
+                    <h2 onclick="getPosts('Tech')">Tech</h2>
+                    <h2 onclick="getPosts('Science')">Science</h2>
+                    <h2 onclick="getPosts('Cats')">Cats</h2>
+                    <h2 onclick="getPosts('Health')">Health</h2>
+                    <h2 onclick="getPosts('Food')">Food</h2>
+                    <h2 onclick="getPosts('cars')">Cars</h2>
+                </div>
+              </td>
+              <td class="inner_td">
+                <div id="postList" class="questions">
+                    Loading recent questions...
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </body>
+    <script>getPosts()</script>
+</html>
