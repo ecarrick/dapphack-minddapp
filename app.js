@@ -64,7 +64,7 @@ window.getPosts = async (filter) => {
                                 <tbody>
                                 <tr>
                                     <td class="post">
-                                    <img class="post_image" src="../img/blockchain.jpeg"/>
+                                    <img class="post_image" src="img/blockchain.jpeg"/>
                                     </td>
                                     <td>
                                     <h3><a href="${server}${post.url}">${author} asked ${created}</a></h3>
